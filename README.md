@@ -1,0 +1,19 @@
+This is a very crude recommendation system that suggests songs based on input.
+
+We extract the following musical features:
+  1. MFCC - Mel Frequency Cepstral Coefficients: Represent the short-term power spectrum of sound. In layma terms it means it captures the texture of sound. Different instruments have different textures. This is used to identify the various instruments.
+  2. Chroma Features: Summarize the energy distribution across the 12 pitch classes.
+  3. Spectral Contrast: Measures the difference in amplitude between peaks and valleys in the audio spectrum. It means it captures the richness of the sound. Like whether it is has smooth ambience or heavy metal rock vibes.
+  4. Tempo: Measure of the speed of the music. It measures the Beats per Minute.
+
+Using this features we project onto a feature space. 
+
+For a given input we also extract the features, project onto the feature space and measure the similarity by measuring the distance between the points.
+
+We use the follwing distance measures:
+  1. Euclidean Distance
+  2. Manhattan Distance
+  3. Cosine Distance
+  4. Dynamic Time Warping
+
+Once we measure all the distances, we give 5 songs for each distance measure whose distnaces are the lowest.
