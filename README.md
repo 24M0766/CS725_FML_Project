@@ -1,4 +1,5 @@
-This is a very crude recommendation system that suggests songs based on input.
+This is a very crude recommendation system that suggests songs based on input. This uses the GTZAN dataset. Please make sure to have the dataset or any other dataset that has songs before running the code.
+The input can be given by changing the path in the input_audio_file variable in the code.
 
 We extract the following musical features:
   1. MFCC - Mel Frequency Cepstral Coefficients: Represent the short-term power spectrum of sound. In layma terms it means it captures the texture of sound. Different instruments have different textures. This is used to identify the various instruments.
